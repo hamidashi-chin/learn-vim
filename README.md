@@ -150,3 +150,55 @@ set hlsearch          # 検索したとき対象文字列にハイライトが�
 set clipboard=unnamed # unnamed オプションを設定すると、通常の yanking（ヤンク）や pasting（ペースト）がシステムの "プライマリ" クリップボードを使用する設定
 syntax on
 ```
+
+## Vimのゲームで操作を覚えていく
+
+[https://vim-adventures.com](https://vim-adventures.com)
+
+# Vimのプラグイン
+
+## Vimのプラグイン管理のVim Plug
+
+Vimのプラグイン管理には下記ある
+- Vim Plug
+- Vundle
+- Pathogen
+- Dein
+- Janus
+
+最近人気あるVim Plugを使う
+
+### vim-plugのインストール
+[https://github.com/junegunn/vim-plug](https://github.com/junegunn/vim-plug)
+
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+### nvim.initにvim-plugの設定値の書き方
+
+```
+call plug#begin()
+
+〜 ここにいろいろ書く 〜
+
+call plug#end()
+```
+
+### vim-holizonをインストールしてみる
+
+- [vim-horizonのGithubページ](https://github.com/ntk148v/vim-horizon?tab=readme-ov-file)
+
+- init.vimの`call plug#begin()`と`call plug#end()`の間に下記を入力
+```
+Plug 'wesQ3/vim-horizon'
+```
+- コマンドモードにて下記を実行しインストール実行
+```
+:PlugInstall
+```
+
+## NERDTree
+
+
