@@ -201,4 +201,35 @@ Plug 'wesQ3/vim-horizon'
 
 ## NERDTree
 
+[NERDTree](https://github.com/preservim/nerdtree)
 
+- init.vimに下記追記して`PlugInstall`を実行
+```
+Plug 'preservim/nerdtree'
+```
+
+- インストールできたら下記でNERDTree表示
+```vim
+:NERDTree
+```
+
+- ディレクトリは`Enter`で開き、開いている状態で`Enter`で開いていた状態から閉じた状態になる
+- カーソルがファイル名上にある時に`Enter`でファイルを開く
+    - ファイル編集側からTree側にカーソルを移動する場合は`ctrl + ww`
+    - Tree側からファイル編集側に戻る場合は再度`ctrl + ww`
+- ファイル編集側のみ表示してNERDTree側を非表示にする場合は、Tree編集側にカーソルがある状態で`:q`
+    - 再度Treeを表示する場合は`:NERDTree`を行う
+    - もしくは`:NERDTreeToggle`でも同様にいける
+    - ただ、上記を毎回入力するのは面倒なのでinit.vimに下記ショートカットの設定を追記
+      ```vim
+      nnoremap <leader>n :NERDTreeFocus<CR>
+      nnoremap <C-n> :NERDTree<CR>
+      nnoremap <C-t> :NERDTreeToggle<CR>
+      nnoremap <C-f> :NERDTreeFind<CR>
+      ```
+    - ファイルを指定せずにnvimを起動した場合はNERDTreeを表示し、ファイル名を指定してnvimを起動した場合はNERDTreeを表示しない設定をinit.vimに追記
+      ```vim
+      " Start NERDTree when Vim is started without file arguments.
+      autocmd StdinReadPre * let s:std_in=1
+      autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+      ```
