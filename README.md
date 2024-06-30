@@ -151,6 +151,17 @@ set clipboard=unnamed # unnamed オプションを設定すると、通常の ya
 syntax on
 ```
 
+### nvimの設定ファイルについて
+
+ - ファイルは下記に作成する
+```
+~/config/nvim/init.vim
+```
+- dotfilesでGit管理する場合は下記で設定している（自分用）
+```
+ln -n -s ~/dotfiles/nvim ~/config/nvim
+```
+
 ## Vimのゲームで操作を覚えていく
 
 [https://vim-adventures.com](https://vim-adventures.com)
