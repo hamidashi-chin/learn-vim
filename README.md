@@ -249,6 +249,12 @@ Plug 'preservim/nerdtree'
 
 [FuzzyFinder](https://github.com/junegunn/fzf)
 
+- fzfをインストール
+```bash
+brew install fzf     -- mac
+sudo apt install fzf -- ubuntu
+```
+
 - init.vimに下記追記して`PlugInstall`を実行
 ```
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -259,4 +265,19 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 :FZF
 ```
 その後、検索するファイルのキーワードを入力すると候補のファイルが表示れる
+
+## vim-fugitive
+
+基本的には、nvim内で`git blame`を使うのに使用する
+
+[vim-figitive](https://github.com/tpope/vim-fugitive)
+
+-- installation
+
+```bash
+mkdir -p ~/.config/nvim/pack/tpope/start
+cd ~/.config/nvim/pack/tpope/start
+git clone https://tpope.io/vim/fugitive.git
+vim -u NONE -c "helptags fugitive/doc" -c q
+```
 
