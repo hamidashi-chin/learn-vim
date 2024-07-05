@@ -244,3 +244,19 @@ Plug 'preservim/nerdtree'
       autocmd StdinReadPre * let s:std_in=1
       autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
       ```
+
+## FuzzyFinder
+
+[FuzzyFinder](https://github.com/junegunn/fzf)
+
+- init.vimに下記追記して`PlugInstall`を実行
+```
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+```
+
+インストールできたら下記でfzf起動
+```vim
+:FZF
+```
+その後、検索するファイルのキーワードを入力すると候補のファイルが表示れる
+
