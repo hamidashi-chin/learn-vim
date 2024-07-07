@@ -313,3 +313,18 @@ vim -u NONE -c "helptags commentary/doc" -c q
 ```bash
 gc
 ```
+
+## vim-polyglot
+
+- ファイルの拡張子で判別してあつかっているファイルや言語に合わせたシンタックス等の表示切り替えをしてくれるライブラリ
+- 有名なライブラリだが、vim-polyglotがどこを勝手に変換したかわからなくなるケースもあるので使用はしない？
+
+[vim-polyglot](https://github.com/sheerun/vim-polyglot)
+
+## coc.nvim
+
+- コードの補完機能が利用できるライブラリ
+
+[coc.nvim](https://github.com/neoclide/coc.nvim)
+
+- 上記GitHubページのUsing coc extensionsで対応している言語等確認する
