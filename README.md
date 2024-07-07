@@ -281,3 +281,35 @@ git clone https://tpope.io/vim/fugitive.git
 vim -u NONE -c "helptags fugitive/doc" -c q
 ```
 
+## vim-gitgutter
+
+- gitで管理しいるファイルを開いたときに、どこを更新したか見た目でわかるようにするツール
+
+[vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+
+- instralltion
+```bash
+mkdir -p ~/.config/nvim/pack/airblade/start
+cd ~/.config/nvim/pack/airblade/start
+git clone https://github.com/airblade/vim-gitgutter.git
+nvim -u NONE -c "helptags vim-gitgutter/doc" -c q
+```
+
+## vim-comentary
+
+- 複数行を一括でコメントアウトできるようにするツール
+
+[vim-comentary](https://github.com/tpope/vim-commentary)
+
+- installation
+```bash
+mkdir -p ~/.config/nvim/pack/tpope/start
+cd ~/.config/nvim/pack/tpope/start
+git clone https://tpope.io/vim/commentary.git
+vim -u NONE -c "helptags commentary/doc" -c q
+```
+
+- インストール後、`visual`モードにして、該当行を選択してから下記を実行するとコメントアウトできる
+```bash
+gc
+```
