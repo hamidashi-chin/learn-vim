@@ -353,4 +353,38 @@ c-b } -- 次のペインと入れ替え
 c-b q (数字が表示されている間に、対象ペインの番号を入力)
 ```
 
+- .tmux.confにて設定を書き換えた後に適用するには`shell`上で
+```bash
+tmux kill-server
+```
+
+- tmux抜けたり戻ったりするには`shell`上で
+```bash
+tmux d -- tmuxに入っている状態から抜ける(detach)
+tmux a -- 抜けた後、抜ける前のwindowに戻る(attach)
+```
+
+## window
+
+- windowの移動
+```
+c-b n -- 次のwindowに移動
+c-b p -- 前のwindowに移動
+c-b (対象の数値) -- 対象の番号のwindowに移動
+```
+
+- windowの破棄
+```
+c-b &
+```
+
+- windowの名前を変更
+```
+c-b ,
+```
+
+## tmux上のコピー
+
+## tmux上のコピー
+
 
